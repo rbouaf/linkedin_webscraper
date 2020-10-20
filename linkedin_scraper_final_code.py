@@ -24,8 +24,10 @@ If the code gives you an error during the login phase, just close the window and
 
 4. This webscraper has issues returning phone numbers. I would consider commenting out the phone part of the code. 
 
-5. At lines 47, 51 and 55, you are asked to give:
-- a path to ChromeDriver, this will change depending on where you installed ChromeDriver
+5. You are asked to give login info and a path to ChromeDriver (this will change depending on where you installed ChromeDriver)
+You edit this in the linkedin_parameters.py file. 
+
+Read the README file. 
 
 
 
