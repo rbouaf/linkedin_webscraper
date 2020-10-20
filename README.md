@@ -6,6 +6,7 @@ It goes through all contacts and returns the name, the job, the company, the loc
 
 ### REQUIRES YOU DOWNLOAD CHROME DRIVER TO RUN. 
 (Make sure the ChromeDriver version you install matches your Chrome Browser version)
+
 (You can check this by going in  **⋮** > Help > About Chrome 
 
 **Make sure you have the right libraries pip installed.**
