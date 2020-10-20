@@ -9,7 +9,7 @@ It goes through all contacts and returns the name, the job, the company, the loc
 (You can check this by going in  **⋮** > Help > About Chrome 
 
 **Make sure you have the right libraries pip installed.
-Make sure you edit "linkedin_parameters.py" to match your own login info and path of Chrome Driver.**
+Make sure you edit "linkedinparameters.py" to match your own login info and path of Chrome Driver.**
 
 Two files, like a 100 lines of code only. Pretty straight forward. 
 
