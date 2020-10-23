@@ -122,7 +122,7 @@ for contact_url in all_contact_links:
 
    sel2 = Selector(text=driver.page_source)
 
-   email = sel2.xpath('//*[@class = "pv-contact-info__contact-link t-14 t-black t-normal" and @rel="noopener noreferrer"]/text()').extract_first()
+   email = sel2.xpath('//*[@class = "pv-contact-info__contact-link link-without-visited-state t-14" and @rel="noopener noreferrer"]/text()').extract_first()
    if email:
       email = email.strip()
 
