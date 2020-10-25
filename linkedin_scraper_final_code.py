@@ -68,11 +68,18 @@ sleep(0.5)
 ############################### GOES TO THE CONTACTS LIST PAGE ################################
 
 driver.get('https://www.linkedin.com/mynetwork/invite-connect/connections/')
-sleep(4)
+sleep(2)
 
 
 
 #################################### GETTING ALL CONTACTS #####################################
+sleep(0.5)
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+GIVE_TIME_TO_LOAD = 5 # LinkedIn might need time to load 5000 connections. 
+#Please conduct a one or two tests to see if LinkedIn has the time to load all contacts. 
+#Edit this variable. 
+sleep(GIVE_TIME_TO_LOAD)
+
 all_contacts = driver.find_elements_by_css_selector('a[data-control-name="connection_profile"]')
 
 all_contact_links = [contact.get_attribute('href') for contact in all_contacts]
@@ -111,14 +118,14 @@ for contact_url in all_contact_links:
 
 
    linkedin_url = driver.current_url
-   sleep(3)
+   sleep(2)
 
 
    contact_info = driver.find_element_by_xpath('//*[starts-with(@data-control-name, "contact_see_more")]')
    contact_info.click()
    contact_info.click()
    contact_info.click() #sometimes it doesn't click right away, so I got frustrated while writing the code.
-   sleep(3)
+   sleep(2)
 
    sel2 = Selector(text=driver.page_source)
 
@@ -133,7 +140,7 @@ for contact_url in all_contact_links:
    if phone:
       phone = phone.strip()
 
-   sleep(3)
+   sleep(2)
 
    # CHECKING IF NO VALUE IS RETURNED, AND RETURNS "NO RESULTS" IF SO. SEE CODE AT THE VERY TOP.
    FirstName = validate_field(FirstName)
