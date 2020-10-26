@@ -73,12 +73,13 @@ sleep(2)
 
 
 #################################### GETTING ALL CONTACTS #####################################
-sleep(0.5)
-driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-GIVE_TIME_TO_LOAD = 5 # LinkedIn might need time to load 5000 connections. 
-#Please conduct a one or two tests to see if LinkedIn has the time to load all contacts. 
-#Edit this variable. 
-sleep(GIVE_TIME_TO_LOAD)
+while True:
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    sleep(1)
+    new_height = driver.execute_script("return document.body.scrollHeight")
+    if new_height == last_height:
+        break
+    last_height = new_height
 
 all_contacts = driver.find_elements_by_css_selector('a[data-control-name="connection_profile"]')
 
