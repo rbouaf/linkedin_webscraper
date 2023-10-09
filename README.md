@@ -1,4 +1,4 @@
-#(Outdated now)
+# (Outdated now)
 ## LinkedIn Web Scraper 
 ### This is a simple web scraper for LinkedIn, written in Python. 
 
